@@ -1,0 +1,38 @@
+{
+  "name": "gurukul-metals-nonmetals-video",
+  "version": "1.0.0",
+  "description": "Playful NCERT Class 10 Metals and Non-metals demo built with Remotion",
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc",
+    "mvp:dev": "node scripts/mvp-server.mjs",
+    "voiceover:generate": "powershell -ExecutionPolicy Bypass -File scripts/generate-voiceover.ps1",
+    "voiceover:teacher": "powershell -ExecutionPolicy Bypass -File scripts/generate-voiceover.ps1 -VoiceName 'Microsoft David Desktop' -Rate 0 -Style teacher",
+    "render:demo": "powershell -ExecutionPolicy Bypass -File scripts/render-demo-1080.ps1",
+    "render:demo:1080": "powershell -ExecutionPolicy Bypass -File scripts/render-demo-1080.ps1",
+    "render:mvp": "npx remotion render BookAutoMvp out/mvp/renders/book-auto-mvp.mp4 --codec=h264 --props=out/mvp/remotion/latest-remotion-package.json",
+    "render:reactivity": "remotion render Scene04Reactivity out/scene04-reactivity.mp4 --codec=h264",
+    "render:ionic": "remotion render Scene05IonicBond out/scene05-ionic-bond.mp4 --codec=h264"
+  },
+  "repository": {},
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@remotion/zod-types": "^4.0.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "^4.0.0",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "^4.0.0",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "9.19.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "private": true
+}

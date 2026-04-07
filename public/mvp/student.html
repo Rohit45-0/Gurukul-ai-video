@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gurukul Student Companion</title>
+    <meta
+      name="description"
+      content="Prototype student companion with topic checkpoints, concept practice, AI coaching, and real-life scenarios."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/mvp/student.css" />
+  </head>
+  <body>
+    <div class="companion-ambient companion-ambient-a"></div>
+    <div class="companion-ambient companion-ambient-b"></div>
+    <div class="companion-grain"></div>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow-row">
+          <span class="eyebrow">Student Companion MVP</span>
+          <span class="prototype-pill">Guided AI Prototype</span>
+        </div>
+        <h1 id="chapter-title">Loading chapter companion...</h1>
+        <p class="hero-summary" id="chapter-summary">
+          This prototype turns one chapter video into timestamped checkpoints with concept
+          practice, AI help, and real-life application.
+        </p>
+
+        <div class="hero-meta">
+          <div class="meta-card">
+            <span class="meta-label">Source Note</span>
+            <strong class="meta-value" id="source-note">Preparing source context...</strong>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label">Study Loop</span>
+            <strong class="meta-value">Watch -> Check -> Coach -> Apply</strong>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label">Prototype Goal</span>
+            <strong class="meta-value">See how topic-level learning could feel</strong>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <div class="ring-card">
+          <div class="ring-shell">
+            <div class="ring-track" id="mastery-ring">
+              <div class="ring-core">
+                <div class="ring-score" id="mastery-score">0%</div>
+                <div class="ring-label">chapter mastery</div>
+              </div>
+            </div>
+          </div>
+          <div class="ring-stats">
+            <div class="ring-stat">
+              <span class="ring-stat-label">Topics Completed</span>
+              <strong id="topics-completed">0 / 0</strong>
+            </div>
+            <div class="ring-stat">
+              <span class="ring-stat-label">Coach Uses</span>
+              <strong id="coach-uses">0</strong>
+            </div>
+            <div class="ring-stat">
+              <span class="ring-stat-label">Needs Revisit</span>
+              <strong id="topics-revisit">0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-title">What this demo proves</div>
+          <div class="mission-copy">
+            A chapter video can become an active companion instead of a passive summary if each
+            timestamp opens a small learning loop.
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <main class="companion-shell">
+      <section class="stage-panel panel">
+        <div class="panel-head">
+          <div>
+            <div class="section-kicker">Video Stage</div>
+            <h2>Checkpoint Video</h2>
+          </div>
+          <div class="control-strip">
+            <label class="toggle">
+              <input type="checkbox" id="autopause-toggle" checked />
+              <span>Auto-pause at checkpoints</span>
+            </label>
+            <button class="chip-button" id="play-topic-button" type="button">
+              Play Active Topic
+            </button>
+          </div>
+        </div>
+
+        <div class="video-frame">
+          <video
+            class="lesson-video"
+            id="lesson-video"
+            controls
+            playsinline
+            preload="metadata"
+          ></video>
+          <div class="video-overlay">
+            <div class="overlay-chip" id="overlay-time">Checkpoint 01</div>
+            <div class="overlay-copy">
+              <strong id="overlay-title">Preparing topic...</strong>
+              <span id="overlay-mission">Loading mission context...</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkpoint-bar" id="checkpoint-bar"></div>
+        <div class="journey-note" id="journey-note">
+          Click a checkpoint to jump the video and open its mission stack.
+        </div>
+      </section>
+
+      <aside class="timeline-panel panel">
+        <div class="panel-head">
+          <div>
+            <div class="section-kicker">Timeline</div>
+            <h2>Topic Checkpoints</h2>
+          </div>
+        </div>
+
+        <div class="timeline-list" id="topic-list"></div>
+
+        <div class="revision-card">
+          <div class="revision-title">Revision Queue</div>
+          <div class="revision-copy">
+            Topics where the student still needs support should surface here automatically.
+          </div>
+          <div class="revision-list" id="revision-list"></div>
+        </div>
+      </aside>
+
+      <section class="workspace-panel panel">
+        <div class="panel-head workspace-head">
+          <div>
+            <div class="section-kicker" id="topic-kicker">Checkpoint 01</div>
+            <h2 id="topic-title">Preparing mission...</h2>
+          </div>
+          <div class="workspace-meta">
+            <div class="workspace-pill" id="topic-range">00:00 - 00:00</div>
+            <div class="workspace-pill workspace-pill-muted" id="topic-source">Source anchor</div>
+          </div>
+        </div>
+
+        <div class="mission-banner">
+          <span class="mission-badge">Mission</span>
+          <p id="topic-mission">
+            Each checkpoint opens a small loop: recall the concept, answer, get guided help, and
+            apply it in real life.
+          </p>
+        </div>
+
+        <div class="workspace-grid">
+          <article class="card recap-card">
+            <div class="card-kicker">Topic Snapshot</div>
+            <p class="recap-copy" id="topic-recap">Loading recap...</p>
+            <p class="observation-copy" id="topic-observation">Loading observation cue...</p>
+          </article>
+
+          <article class="card interactive-card">
+            <div class="card-head">
+              <div>
+                <div class="card-kicker">Quick Check</div>
+                <h3 id="quick-check-title">Question</h3>
+              </div>
+              <div class="card-status" id="quick-check-status">Not started</div>
+            </div>
+            <div class="question-copy" id="quick-check-prompt"></div>
+            <div class="choice-grid" id="quick-check-options"></div>
+            <div class="feedback-box" id="quick-check-feedback">Answer a checkpoint question.</div>
+          </article>
+
+          <article class="card interactive-card">
+            <div class="card-head">
+              <div>
+                <div class="card-kicker">Puzzle</div>
+                <h3 id="puzzle-title">Concept Puzzle</h3>
+              </div>
+              <div class="card-status" id="puzzle-status">Not started</div>
+            </div>
+            <div class="question-copy" id="puzzle-instruction"></div>
+            <div class="puzzle-zone" id="puzzle-zone"></div>
+            <div class="puzzle-controls" id="puzzle-controls"></div>
+            <div class="feedback-box" id="puzzle-feedback">
+              Solve the concept puzzle to lock the idea in memory.
+            </div>
+          </article>
+
+          <article class="card coach-card">
+            <div class="card-head">
+              <div>
+                <div class="card-kicker">AI Coach</div>
+                <h3>Guided Help, Not Open Chat</h3>
+              </div>
+              <div class="card-status" id="coach-status">Ready</div>
+            </div>
+            <div class="coach-actions">
+              <button class="coach-button active" data-coach-mode="simple" type="button">
+                Explain Simply
+              </button>
+              <button class="coach-button" data-coach-mode="analogy" type="button">
+                Give Analogy
+              </button>
+              <button class="coach-button" data-coach-mode="mistake" type="button">
+                See My Gap
+              </button>
+              <button class="coach-button" data-coach-mode="realLife" type="button">
+                Real-Life Link
+              </button>
+            </div>
+            <div class="coach-response" id="coach-response">
+              Pick a coaching mode to see how guided help could feel here.
+            </div>
+          </article>
+
+          <article class="card interactive-card">
+            <div class="card-head">
+              <div>
+                <div class="card-kicker">Real-Life Scenario</div>
+                <h3 id="scenario-title">Scenario</h3>
+              </div>
+              <div class="card-status" id="scenario-status">Not started</div>
+            </div>
+            <div class="question-copy" id="scenario-prompt"></div>
+            <div class="choice-grid" id="scenario-options"></div>
+            <div class="feedback-box" id="scenario-feedback">
+              Choose the best action and see why it matters outside the textbook.
+            </div>
+          </article>
+
+          <article class="card teachback-card">
+            <div class="card-head">
+              <div>
+                <div class="card-kicker">Teach Back</div>
+                <h3>Explain It in Your Own Words</h3>
+              </div>
+              <div class="card-status" id="teachback-status">Not started</div>
+            </div>
+            <div class="question-copy" id="teachback-prompt"></div>
+            <textarea
+              class="teachback-input"
+              id="teachback-input"
+              placeholder="Try explaining the concept as if you were helping a classmate."
+            ></textarea>
+            <div class="teachback-actions">
+              <button class="chip-button chip-button-solid" id="teachback-submit" type="button">
+                Review My Explanation
+              </button>
+            </div>
+            <div class="feedback-box" id="teachback-feedback">
+              This MVP uses keyword-aware local feedback as a stand-in for a future AI tutor.
+            </div>
+          </article>
+
+          <article class="card notes-card">
+            <div class="card-kicker">MVP Notes</div>
+            <ul class="notes-list">
+              <li>Video stays the entry point, but learning happens at each checkpoint.</li>
+              <li>AI here is guided and topic-locked to control cost and quality.</li>
+              <li>The same page shape can later load any generated chapter package.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/mvp/student.js"></script>
+  </body>
+</html>

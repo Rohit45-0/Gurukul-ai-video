@@ -1,0 +1,548 @@
+{
+  "chapterTitle": "Metals and Non-metals",
+  "summary": "A student companion prototype that uses the existing chapter video as the front door and turns each topic into a mini loop: check, coach, apply, and teach back.",
+  "sourceNote": "This demo is wired to the existing rendered chapter artifact in the repo. The active jesc1an.pdf file is an answers booklet, so it is not rich enough to power concept checkpoints by itself.",
+  "sourcePdfLabel": "NCERT Class 10 Science Chapter PDF",
+  "sourcePdfUrl": "/mvp/generated/source/jesc103.pdf",
+  "videoUrl": "/mvp/generated/videos/1774957152277-metals-and-non-metals.mp4",
+  "estimatedStudyMinutes": 12,
+  "topics": [
+    {
+      "id": "S1",
+      "timestampLabel": "00:00",
+      "startSeconds": 0,
+      "endSeconds": 10,
+      "title": "Everyday Materials",
+      "mission": "Start with the chapter question and decide what makes one material suitable for a job while another fails.",
+      "recap": "The chapter opens by contrasting the things metals and non-metals can do for us in daily life. The big idea is not just naming them. It is linking a property to a purpose.",
+      "observation": "Think of one object near you right now. Was it chosen for strength, shine, heat flow, current flow, or because it should not react?",
+      "sourceAnchor": "Intro and opening questions",
+      "quickCheck": {
+        "title": "Pick the best use case",
+        "prompt": "Which object needs a metal mainly because electric current must pass through it easily?",
+        "options": [
+          {
+            "id": "a",
+            "label": "A chalk duster handle",
+            "isCorrect": false,
+            "feedback": "A duster handle is chosen more for comfort and grip than electrical conduction."
+          },
+          {
+            "id": "b",
+            "label": "The inside wire of a phone charger",
+            "isCorrect": true,
+            "feedback": "Yes. The core reason is conduction. Metals like copper let current pass with low resistance."
+          },
+          {
+            "id": "c",
+            "label": "A plastic lunch box lid",
+            "isCorrect": false,
+            "feedback": "Plastic is often useful because it blocks current and heat rather than carrying them."
+          }
+        ]
+      },
+      "puzzle": {
+        "kind": "pick",
+        "instruction": "Choose the pair where both objects are likely to use metals for a clear reason.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Pencil eraser and raincoat",
+            "isCorrect": false,
+            "feedback": "Those are chosen for softness or water resistance, not because they behave like metals."
+          },
+          {
+            "id": "b",
+            "label": "Electric wire core and steel spoon",
+            "isCorrect": true,
+            "feedback": "Exactly. One needs conduction and the other needs strength and heat tolerance."
+          },
+          {
+            "id": "c",
+            "label": "Balloon and chalk powder",
+            "isCorrect": false,
+            "feedback": "These do not depend on metallic properties in the same way."
+          }
+        ]
+      },
+      "coach": {
+        "simple": "A material is useful when one of its properties matches the job. Metals often win when we need conduction, strength, shape retention, or toughness.",
+        "analogy": "Think of materials like team members. You do not choose the fastest runner to write on the board. You choose the teammate whose strength matches the task.",
+        "realLife": "Inside most chargers, wires are metallic for conduction, while the outer covering is plastic because it protects us by resisting current.",
+        "mistake": "A common slip here is thinking all visible objects must use metals. The better question is always: what property is the object supposed to deliver?"
+      },
+      "scenario": {
+        "title": "School Canteen Decision",
+        "prompt": "The school wants reusable lunch plates. Which reason best supports stainless steel over paper plates?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Steel plates can be washed and reused for long periods",
+            "isBest": true,
+            "feedback": "Good choice. This uses durability and practicality, which is how material selection works in real life."
+          },
+          {
+            "id": "b",
+            "label": "Steel plates are softer than paper",
+            "isBest": false,
+            "feedback": "Not right. Softness is not the advantage here."
+          },
+          {
+            "id": "c",
+            "label": "Steel plates dissolve in water more slowly",
+            "isBest": false,
+            "feedback": "That is not the deciding concept. The real reason is durability and repeated use."
+          }
+        ]
+      },
+      "teachBack": {
+        "prompt": "Explain how we decide between a metal and a non-metal in real life.",
+        "keywords": ["property", "use", "conduct", "strength"]
+      }
+    },
+    {
+      "id": "S2",
+      "timestampLabel": "00:10",
+      "startSeconds": 10,
+      "endSeconds": 20,
+      "title": "Physical Properties",
+      "mission": "Use the chapter vocabulary to connect property words to objects and exceptions.",
+      "recap": "Metals are often lustrous, malleable, ductile, and conductive. Non-metals are usually brittle and poor conductors. The word usually matters because there are exceptions.",
+      "observation": "Look around for one shiny object, one object made from wire, and one object made from a brittle material.",
+      "sourceAnchor": "Physical properties and exceptions",
+      "quickCheck": {
+        "title": "Name the property",
+        "prompt": "If a metal can be beaten into thin sheets, which property are we describing?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Ductility",
+            "isCorrect": false,
+            "feedback": "Ductility is about being drawn into wires."
+          },
+          {
+            "id": "b",
+            "label": "Malleability",
+            "isCorrect": true,
+            "feedback": "Correct. Malleability is the property that lets a metal become sheets."
+          },
+          {
+            "id": "c",
+            "label": "Sonority",
+            "isCorrect": false,
+            "feedback": "Sonority is about sound when the material is struck."
+          }
+        ]
+      },
+      "puzzle": {
+        "kind": "pick",
+        "instruction": "Spot the exception that shows rules in science can have exceptions.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Graphite conducts electricity even though it is a non-metal",
+            "isCorrect": true,
+            "feedback": "Exactly. This is memorable because it breaks the common pattern."
+          },
+          {
+            "id": "b",
+            "label": "Copper is used in wires because it conducts electricity",
+            "isCorrect": false,
+            "feedback": "That is a standard example, not an exception."
+          },
+          {
+            "id": "c",
+            "label": "Iron is often strong and useful for structures",
+            "isCorrect": false,
+            "feedback": "That supports the rule rather than breaking it."
+          }
+        ]
+      },
+      "coach": {
+        "simple": "Malleable means sheets. Ductile means wires. The easiest memory trick is hammer for malleable and drawing for ductile.",
+        "analogy": "Imagine dough. If you flatten it into a roti shape, that is like malleability. If you stretch it into a long strand, that feels like ductility.",
+        "realLife": "A metal cooking vessel works because heat passes through it. The handle is often coated or made differently because your hand should not feel that heat directly.",
+        "mistake": "Students often mix up malleability and ductility because both involve changing shape. The shape you end up with is the clue: sheet or wire."
+      },
+      "scenario": {
+        "title": "Kitchen Design",
+        "prompt": "Why is the body of a cooking pan metal, but the handle is often plastic or wood?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Because the pan body should conduct heat while the handle should reduce heat transfer",
+            "isBest": true,
+            "feedback": "That is the real design logic. Different parts of the same object can use different materials for different jobs."
+          },
+          {
+            "id": "b",
+            "label": "Because plastic is always stronger than metal",
+            "isBest": false,
+            "feedback": "Not true. The choice here is about heat flow and safe handling."
+          },
+          {
+            "id": "c",
+            "label": "Because metal cannot be shaped into handles",
+            "isBest": false,
+            "feedback": "Metal can be shaped. The issue is that a metal handle would get too hot."
+          }
+        ]
+      },
+      "teachBack": {
+        "prompt": "Explain the difference between malleability, ductility, and conductivity with one real example.",
+        "keywords": ["sheet", "wire", "heat", "electricity"]
+      }
+    },
+    {
+      "id": "S3",
+      "timestampLabel": "00:20",
+      "startSeconds": 20,
+      "endSeconds": 30,
+      "title": "Chemical Reactions",
+      "mission": "Predict what a metal might do with air, water, or acids, then connect that behavior to safety and storage.",
+      "recap": "Metals react differently with oxygen, water, and acids. Some react quickly and need care. Others react slowly and look stable in everyday use.",
+      "observation": "Think about why sodium is not kept openly in the classroom while copper utensils can sit in the open.",
+      "sourceAnchor": "Reactions with oxygen, water, and acids",
+      "quickCheck": {
+        "title": "Predict the reaction",
+        "prompt": "Which metal must be stored carefully because it reacts vigorously with water?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Sodium",
+            "isCorrect": true,
+            "feedback": "Correct. Sodium is highly reactive and must be handled and stored with care."
+          },
+          {
+            "id": "b",
+            "label": "Copper",
+            "isCorrect": false,
+            "feedback": "Copper is far less reactive with water than sodium."
+          },
+          {
+            "id": "c",
+            "label": "Gold",
+            "isCorrect": false,
+            "feedback": "Gold is one of the least reactive metals."
+          }
+        ]
+      },
+      "puzzle": {
+        "kind": "order",
+        "instruction": "Tap the situations in order from safest around water to most dangerous around water.",
+        "options": [
+          "Gold ornament",
+          "Copper strip",
+          "Iron nail",
+          "Sodium piece"
+        ],
+        "correctOrder": [
+          "Gold ornament",
+          "Copper strip",
+          "Iron nail",
+          "Sodium piece"
+        ],
+        "feedback": "The idea is relative reactivity. Even if not all are dramatic in plain water, sodium belongs at the high-risk end."
+      },
+      "coach": {
+        "simple": "When a metal reacts strongly, we worry about heat, gas, or damage. Reactivity is really about how ready the metal is to combine with other substances.",
+        "analogy": "Some metals are like people who respond instantly to every message. Others are calm and take a long time to react.",
+        "realLife": "Chemical reactivity decides storage, safety, extraction, and where a metal is useful. It is not just a lab fact.",
+        "mistake": "A frequent mistake is judging reactivity only by shine. A shiny surface does not automatically mean a metal is safe or unreactive."
+      },
+      "scenario": {
+        "title": "Lab Safety Choice",
+        "prompt": "A student wants to keep a reactive sample in an open tray near the sink. What is the better response?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Allow it because all metals are safe in air and water",
+            "isBest": false,
+            "feedback": "That ignores the whole idea of different reaction levels."
+          },
+          {
+            "id": "b",
+            "label": "Store it using the method recommended for highly reactive metals and keep it away from water",
+            "isBest": true,
+            "feedback": "Yes. Real understanding means translating the chapter into safe handling decisions."
+          },
+          {
+            "id": "c",
+            "label": "Mix it with acid first to make it stable",
+            "isBest": false,
+            "feedback": "That could make the situation worse."
+          }
+        ]
+      },
+      "teachBack": {
+        "prompt": "Explain why reaction knowledge matters for safety, not just for marks.",
+        "keywords": ["react", "water", "safe", "store"]
+      }
+    },
+    {
+      "id": "S4",
+      "timestampLabel": "00:30",
+      "startSeconds": 30,
+      "endSeconds": 40,
+      "title": "Reactivity Series",
+      "mission": "Use the order of metals to predict displacement and compare which metal is more eager to react.",
+      "recap": "The reactivity series gives a ranked list from more reactive metals to less reactive ones. A more reactive metal can displace a less reactive metal from its salt solution.",
+      "observation": "This is a prediction tool. It helps you answer what will happen before you run the experiment.",
+      "sourceAnchor": "Reactivity series and displacement",
+      "quickCheck": {
+        "title": "Use the rule",
+        "prompt": "If an iron nail is placed in copper sulphate solution, what should happen?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Nothing changes because both are metals",
+            "isCorrect": false,
+            "feedback": "The fact that both are metals is not the deciding rule. Their relative reactivity is."
+          },
+          {
+            "id": "b",
+            "label": "Iron displaces copper because iron is above copper in the series",
+            "isCorrect": true,
+            "feedback": "Exactly. This is the core displacement idea."
+          },
+          {
+            "id": "c",
+            "label": "Copper displaces iron because copper looks shinier",
+            "isCorrect": false,
+            "feedback": "Shine is not the rule. The series order is."
+          }
+        ]
+      },
+      "puzzle": {
+        "kind": "order",
+        "instruction": "Tap these metals from more reactive to less reactive.",
+        "options": [
+          "Magnesium",
+          "Iron",
+          "Copper",
+          "Gold"
+        ],
+        "correctOrder": [
+          "Magnesium",
+          "Iron",
+          "Copper",
+          "Gold"
+        ],
+        "feedback": "This order matters because it predicts displacement, extraction difficulty, and relative behavior."
+      },
+      "coach": {
+        "simple": "The metal higher in the series is more willing to react. In displacement, that stronger metal takes the place of the weaker one in solution.",
+        "analogy": "Picture a ladder. If one student is higher on the ladder, they have more priority. A higher metal can push out a lower metal.",
+        "realLife": "This ranking is useful in corrosion, extraction, and material choice. The series is not just for one experiment.",
+        "mistake": "The classic mistake is using appearance instead of the reactivity order. The list, not the look, predicts the result."
+      },
+      "scenario": {
+        "title": "Repair Shop Reasoning",
+        "prompt": "A mechanic wants a metal that is less eager to react for decorative parts. Which direction is better?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Choose a metal lower in the reactivity series",
+            "isBest": true,
+            "feedback": "Right. Less reactive metals are often preferred where appearance and resistance to easy reaction matter."
+          },
+          {
+            "id": "b",
+            "label": "Choose the most reactive metal possible",
+            "isBest": false,
+            "feedback": "Highly reactive metals are usually not the first choice for decorative stability."
+          },
+          {
+            "id": "c",
+            "label": "Ignore the series because it only matters in textbooks",
+            "isBest": false,
+            "feedback": "The series has practical consequences for selection and behavior."
+          }
+        ]
+      },
+      "teachBack": {
+        "prompt": "Explain displacement reaction in a way a younger student could understand.",
+        "keywords": ["higher", "series", "replace", "solution"]
+      }
+    },
+    {
+      "id": "S5",
+      "timestampLabel": "00:40",
+      "startSeconds": 40,
+      "endSeconds": 50,
+      "title": "Ionic Compounds and Extraction",
+      "mission": "Link textbook facts about ionic compounds and extraction methods to what they mean in practice.",
+      "recap": "Ionic compounds are hard solids with high melting points and conduct electricity when molten or dissolved, not in solid form. Extraction method depends on how reactive the metal is.",
+      "observation": "The same chapter explains both how compounds behave and why getting pure metal out of ore takes different methods.",
+      "sourceAnchor": "Ionic compounds and extraction",
+      "quickCheck": {
+        "title": "Conduction condition",
+        "prompt": "When does an ionic compound conduct electricity well?",
+        "options": [
+          {
+            "id": "a",
+            "label": "When it is a solid crystal",
+            "isCorrect": false,
+            "feedback": "In the solid state, the ions are fixed and cannot move freely."
+          },
+          {
+            "id": "b",
+            "label": "When it is molten or dissolved in water",
+            "isCorrect": true,
+            "feedback": "Correct. Ions need freedom to move for current to flow."
+          },
+          {
+            "id": "c",
+            "label": "Only when it is very cold",
+            "isCorrect": false,
+            "feedback": "Temperature alone is not the idea. Mobility of ions is."
+          }
+        ]
+      },
+      "puzzle": {
+        "kind": "order",
+        "instruction": "Tap the extraction journey in the most sensible order.",
+        "options": [
+          "Ore",
+          "Concentrated ore",
+          "Metal compound prepared for reduction",
+          "Pure metal"
+        ],
+        "correctOrder": [
+          "Ore",
+          "Concentrated ore",
+          "Metal compound prepared for reduction",
+          "Pure metal"
+        ],
+        "feedback": "This gives the learner a process picture rather than isolated terms."
+      },
+      "coach": {
+        "simple": "Ionic compounds conduct only when ions can move. Extraction changes with reactivity because some metals hold oxygen or other partners more strongly than others.",
+        "analogy": "Imagine ions like people in a packed classroom. If everyone is frozen in place, nothing moves. If they can move around, a path opens.",
+        "realLife": "This topic explains why metal production is expensive, energy-heavy, and different across ores and industries.",
+        "mistake": "A common confusion is thinking ionic means conductive in every form. The missing idea is movement of ions."
+      },
+      "scenario": {
+        "title": "Industrial Choice",
+        "prompt": "Why might a highly reactive metal need electrolysis instead of a simple reduction method?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Because highly reactive metals do not give up their compounds easily",
+            "isBest": true,
+            "feedback": "Yes. The method depends on how strongly the metal is held in its compound."
+          },
+          {
+            "id": "b",
+            "label": "Because all metals use the exact same extraction route",
+            "isBest": false,
+            "feedback": "The chapter makes the opposite point."
+          },
+          {
+            "id": "c",
+            "label": "Because electrolysis makes the metal non-reactive forever",
+            "isBest": false,
+            "feedback": "Extraction changes purity, not the metal's basic nature."
+          }
+        ]
+      },
+      "teachBack": {
+        "prompt": "Explain why ionic compounds do not conduct in solid form but can conduct when molten or dissolved.",
+        "keywords": ["ions", "move", "solid", "molten"]
+      }
+    },
+    {
+      "id": "S6",
+      "timestampLabel": "00:50",
+      "startSeconds": 50,
+      "endSeconds": 60,
+      "title": "Corrosion and Prevention",
+      "mission": "Use the concept of rusting to make a maintenance decision that a school or home would actually face.",
+      "recap": "Rusting needs both air and water. Protection methods such as painting, oiling, galvanising, or alloying are used to reduce corrosion.",
+      "observation": "This topic is easy to see in real life because gates, railings, bicycle chains, and tools all age in visible ways.",
+      "sourceAnchor": "Corrosion, rusting, and prevention",
+      "quickCheck": {
+        "title": "Conditions for rust",
+        "prompt": "Which condition is necessary for rusting of iron?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Air and water together",
+            "isCorrect": true,
+            "feedback": "Correct. Rusting needs both air and water."
+          },
+          {
+            "id": "b",
+            "label": "Only dry air",
+            "isCorrect": false,
+            "feedback": "Dry air alone does not create the same rusting condition."
+          },
+          {
+            "id": "c",
+            "label": "Only distilled water without air",
+            "isCorrect": false,
+            "feedback": "Water without air is not enough for the usual rusting process."
+          }
+        ]
+      },
+      "puzzle": {
+        "kind": "pick",
+        "instruction": "Choose the best maintenance move for a school iron gate exposed to rain.",
+        "options": [
+          {
+            "id": "a",
+            "label": "Leave it bare because iron is strong",
+            "isCorrect": false,
+            "feedback": "Strength alone does not stop corrosion."
+          },
+          {
+            "id": "b",
+            "label": "Paint it and inspect it regularly",
+            "isCorrect": true,
+            "feedback": "Yes. A protective layer reduces contact with air and water."
+          },
+          {
+            "id": "c",
+            "label": "Wash it with water every day and keep it wet",
+            "isCorrect": false,
+            "feedback": "That would increase the chance of corrosion rather than reduce it."
+          }
+        ]
+      },
+      "coach": {
+        "simple": "Corrosion is not just a chemistry word. It changes safety, appearance, and the life of real objects around us.",
+        "analogy": "Protective coatings act like a raincoat for metal. The idea is to keep the damaging environment from touching the iron easily.",
+        "realLife": "Schools, bridges, bikes, and kitchen tools all need maintenance plans because corrosion costs money and shortens product life.",
+        "mistake": "A common misunderstanding is thinking rusting happens just because the metal is outside. The key condition is exposure to both air and moisture."
+      },
+      "scenario": {
+        "title": "Campus Maintenance",
+        "prompt": "The school gate already shows orange rust spots. What is the best response?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Ignore it because rust only changes color",
+            "isBest": false,
+            "feedback": "Rust can weaken material over time. It is not just a cosmetic issue."
+          },
+          {
+            "id": "b",
+            "label": "Clean the affected surface and add a protective coating",
+            "isBest": true,
+            "feedback": "That translates chapter knowledge into maintenance action."
+          },
+          {
+            "id": "c",
+            "label": "Keep the gate wet so the rust can wash away",
+            "isBest": false,
+            "feedback": "Moisture supports the problem rather than fixing it."
+          }
+        ]
+      },
+      "teachBack": {
+        "prompt": "Explain rusting and one prevention method using an object from daily life.",
+        "keywords": ["air", "water", "rust", "paint"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gurukul Lesson View</title>
+    <meta
+      name="description"
+      content="Simple lesson view prototype: chapter video, topic timestamps, source PDF, and concept support."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/mvp/lesson-view.css" />
+  </head>
+  <body>
+    <div class="halo halo-a"></div>
+    <div class="halo halo-b"></div>
+    <div class="grain"></div>
+
+    <header class="topbar">
+      <div class="brand-block">
+        <span class="eyebrow">Simple MVP View</span>
+        <h1 id="chapter-title">Loading lesson...</h1>
+        <p id="chapter-summary">
+          This is a stripped-down preview of how a student would watch the chapter video and open
+          topic-level support without entering a big platform.
+        </p>
+      </div>
+
+      <div class="source-card">
+        <div class="source-kicker">Source</div>
+        <div class="source-title" id="source-title">Preparing chapter source...</div>
+        <div class="source-copy" id="source-copy">
+          This lesson screen is grounded in an existing chapter artifact from the repo.
+        </div>
+        <div class="source-actions">
+          <a class="source-button source-button-solid" id="open-pdf-link" href="#" target="_blank" rel="noreferrer">
+            Open Chapter PDF
+          </a>
+          <a class="source-button" href="/mvp/">
+            Back to Workspace
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="lesson-shell">
+      <section class="video-panel panel">
+        <div class="panel-head">
+          <div>
+            <div class="section-kicker">Watch</div>
+            <h2>Chapter Video</h2>
+          </div>
+          <div class="panel-note" id="topic-time-range">00:00 - 00:00</div>
+        </div>
+
+        <div class="video-stage">
+          <video class="lesson-video" id="lesson-video" controls playsinline preload="metadata"></video>
+          <div class="video-label">
+            <span class="video-badge" id="active-topic-badge">Topic 01</span>
+            <div class="video-copy">
+              <strong id="active-topic-title">Preparing topic...</strong>
+              <span id="active-topic-mission">Loading topic support...</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-head">
+          <div>
+            <div class="section-kicker">Jump To</div>
+            <h2>Topic Timestamps</h2>
+          </div>
+        </div>
+        <div class="topic-strip" id="topic-strip"></div>
+      </section>
+
+      <section class="support-panel panel">
+        <div class="panel-head support-head">
+          <div>
+            <div class="section-kicker" id="support-kicker">Topic 01</div>
+            <h2 id="support-title">Preparing concept support...</h2>
+          </div>
+          <div class="support-chip" id="support-source">Source anchor</div>
+        </div>
+
+        <article class="support-card lead-card">
+          <div class="card-kicker">What This Topic Means</div>
+          <p class="support-copy" id="support-recap">
+            A short concept explanation will appear here.
+          </p>
+          <p class="support-observation" id="support-observation">
+            A real-world observation prompt will appear here.
+          </p>
+        </article>
+
+        <div class="support-grid">
+          <article class="support-card">
+            <div class="card-kicker">Quick Quiz</div>
+            <div class="question-copy" id="quiz-prompt">Loading question...</div>
+            <div class="option-list" id="quiz-options"></div>
+            <div class="feedback-box" id="quiz-feedback">
+              Click an answer to see how this checkpoint could work.
+            </div>
+          </article>
+
+          <article class="support-card">
+            <div class="card-kicker">AI Explanation</div>
+            <div class="coach-actions">
+              <button class="coach-button active" data-mode="simple" type="button">
+                Explain Simply
+              </button>
+              <button class="coach-button" data-mode="analogy" type="button">
+                Give Analogy
+              </button>
+              <button class="coach-button" data-mode="mistake" type="button">
+                Why Wrong?
+              </button>
+            </div>
+            <div class="feedback-box" id="coach-copy">
+              The AI support box will stay short and topic-locked rather than becoming an open chat.
+            </div>
+          </article>
+
+          <article class="support-card support-card-wide">
+            <div class="card-kicker">Real-Life Application</div>
+            <div class="question-copy" id="scenario-prompt">Loading scenario...</div>
+            <div class="option-list" id="scenario-options"></div>
+            <div class="feedback-box" id="scenario-feedback">
+              This is where the chapter moves from textbook knowledge to a real decision.
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/mvp/lesson-view.js"></script>
+  </body>
+</html>
